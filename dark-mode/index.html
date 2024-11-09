@@ -40,6 +40,22 @@
 
 	</footer>
 	<script id="theme.js">
+        // Grab the html element that sets the mode
+        const doc = document.documentElement;
+
+        // function to set light/dark
+        function toggleTheme() {
+            const currentTheme = doc.getAttribute("data-theme");
+            console.log(`current theme: `, currentTheme);
+
+            // Explanation ===>  const newTheme = (condition) ? 'if' : 'else'
+            const newTheme = (currentTheme === "dark") ? "light" : "dark";
+            doc.setAttribute(newTheme);
+        }
+
+        const toggle = document.getElementById("toggle");
+        console.log(`toggle element: `, toggle);
+        toggle.addEventListener('change', toggleTheme);
 
 	</script>
 </body>
