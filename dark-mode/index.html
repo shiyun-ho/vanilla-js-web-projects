@@ -50,7 +50,7 @@
 
             // Explanation ===>  const newTheme = (condition) ? 'if' : 'else'
             const newTheme = (currentTheme === "dark") ? "light" : "dark";
-            doc.setAttribute(newTheme);
+            doc.setAttribute("data-theme", newTheme);
         }
 
         const toggle = document.getElementById("toggle");
